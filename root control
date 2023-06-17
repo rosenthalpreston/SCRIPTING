@@ -1,14 +1,8 @@
 #!/bin/bash 
 # Vérifier si l'utilisateur est root 
-
-if [ "$(id -u)" -eq 0 ]; then 
-
-    echo "L'utilisateur est root." 
-
-else 
-
-    echo "Ce script doit être exécuté par le super administrateur (root)." 
-
-    exit 1 
-
+    if [ "$(id -u)" -eq 0 ]; then 
+        echo "L'utilisateur est root." 
+    else 
+        echo "Ce script doit être exécuté par le super administrateur (root)." 
+        exit 1 
 fi 
